@@ -32,7 +32,7 @@ def exponent (x):
     return num
 
 
-def ln(x):
+def Ln(x):
     yn=0
     yn_1=x-1.0
     if x<=0:
@@ -50,7 +50,7 @@ def XtimesY(x,y):
     elif x==1:
         num=1
     else :
-        num=exponent(y*ln(x))
+        num=exponent(y*Ln(x))
  except :
      num=0
  return num
