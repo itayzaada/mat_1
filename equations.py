@@ -15,7 +15,7 @@ def powe (x,y):
         while (d!=0):
             num=x*num
             d=d-1  
-    return num
+    return float(num)
 
 def atz (x):
         z=x
@@ -23,13 +23,13 @@ def atz (x):
         while(z>1):
             num=num*z
             z=z-1
-        return num
+        return float(num)
 
 def exponent (x):
     num=1
     for i in range (1,100):
         num=num+((powe(x,i))/atz(i))
-    return num
+    return float(num)
 
 
 def Ln(x):
@@ -41,7 +41,7 @@ def Ln(x):
         while (yn-yn_1>0.001) | (yn-yn_1<-0.001):
             yn=yn_1
             yn_1=yn+2*((x-exponent(yn_1))/(x+exponent(yn_1)))
-    return yn_1
+    return float(yn_1)
 
 def XtimesY(x,y):
  try:
@@ -53,7 +53,7 @@ def XtimesY(x,y):
         num=exponent(y*Ln(x))
  except :
      num=0
- return num
+ return float(num)
 
 def sqrt (x,y) :
  try:
@@ -65,7 +65,7 @@ def sqrt (x,y) :
       num=XtimesY(y,1/x)
  except:
      num=0
- return num
+ return float(num)
 
 def calculate (x) :
     num=exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x)
